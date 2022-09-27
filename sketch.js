@@ -23,7 +23,7 @@ function draw() {
   
   //setting variables to create series of circles and use sin function to transform scale
   for (let i = 1; i <= amountTwo; i++) {
-    const angle = 10 * i + frameCount;
+    const angle = 5 * i + frameCount;
     const dimension = sin(angle);
     const x = 125;
     const y = -125;
@@ -60,7 +60,7 @@ function draw() {
   strokeWeight(4);
   
   for (let i = 1; i <= amountThree; i++) {
-    const angle = 10 * i + frameCount;
+    const angle = 5 * i + frameCount;
     const dimension = sin(angle);
     const x = 0;
     const y = 200;
@@ -98,7 +98,7 @@ function draw() {
   strokeWeight(4);
   
   for (let i = 1; i <= amount; i++) {
-    const angle = 10 * i + frameCount;
+    const angle = 5 * i + frameCount;
     const dimension = sin(angle);
     const x = 0;
     const y = 0;
