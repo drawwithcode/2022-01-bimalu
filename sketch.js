@@ -15,31 +15,13 @@ function draw() {
   translate(width / 2, windowHeight / 2);
   background("lightblue");
 
-  //center of the flower
-  //stroke weight, color and amount of circles
-  const amount = 5;
-  stroke("white");
-  strokeWeight(4);
-  //setting variables to create series of circles and use sin function to transform scale
-  for (let i = 1; i <= amount; i++) {
-    const angle = 10 * i + frameCount;
-    const dimension = sin(angle);
-    const x = 0;
-    const y = 0;
-    const rectWidth = 40 * i;
-    const rectHeight = 40 * i;
-    push();
-    fill("khaki");
-    scale(dimension);
-    circle(x, y, rectWidth, rectHeight);
-    pop();
-  }
-
   //variables for secondary petals
+  //stroke weight, color and amount of circles
   const amountTwo = 4;
-
   stroke("white");
   strokeWeight(4);
+  
+  //setting variables to create series of circles and use sin function to transform scale
   for (let i = 1; i <= amountTwo; i++) {
     const angle = 10 * i + frameCount;
     const dimension = sin(angle);
@@ -74,9 +56,9 @@ function draw() {
 
   //variables for main petals
   const amountThree = 6;
-
   stroke("white");
   strokeWeight(4);
+  
   for (let i = 1; i <= amountThree; i++) {
     const angle = 10 * i + frameCount;
     const dimension = sin(angle);
@@ -107,6 +89,25 @@ function draw() {
     fill("cornflowerblue");
     scale(dimension);
     circle(z, x, rectWidth, rectHeight);
+    pop();
+  }
+  
+  //center of the flower
+  const amount = 5;
+  stroke("white");
+  strokeWeight(4);
+  
+  for (let i = 1; i <= amount; i++) {
+    const angle = 10 * i + frameCount;
+    const dimension = sin(angle);
+    const x = 0;
+    const y = 0;
+    const rectWidth = 40 * i;
+    const rectHeight = 40 * i;
+    push();
+    fill("khaki");
+    scale(dimension);
+    circle(x, y, rectWidth, rectHeight);
     pop();
   }
 }
